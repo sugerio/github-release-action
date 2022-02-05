@@ -4,12 +4,18 @@ branding:
   icon: 'git-branch'
   color: 'gray-dark'
 description: 'Publish Github releases from an action'
+
 env:
   GITHUB_TOKEN: 'The Github Token'
+
 inputs:
   commit_message:
     description: 'The commit message to publish'
     required: true
+
+outputs:
+  release_tag:
+    description: "Version tag of new release"
 
 runs:
   using: 'docker'

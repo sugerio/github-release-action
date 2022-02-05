@@ -44,3 +44,4 @@ hub release create -m ${commit_message} $bumped_version
 
 new_version=$(hub release -L 1 -f "%T")
 echo "newly released version:" $new_version
+echo ::set-output name=release_tag::${new_version}
