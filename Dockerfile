@@ -9,8 +9,8 @@ RUN apt update \
 	&& apt autoclean \
 	&& apt clean
 
-ADD entrypoint.sh /entrypoint.sh
+COPY entrypoint.sh /entrypoint.sh
 
-RUN ["chmod", "+x", "/entrypoint.sh"]
+RUN chmod +x entrypoint.sh
 
 ENTRYPOINT ["sh", "/entrypoint.sh"]
