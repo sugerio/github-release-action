@@ -40,7 +40,7 @@ echo "bumped_version_no_v:" $bumped_version_no_v
 bumped_version=v$bumped_version_no_v
 echo "bumped_version:" $bumped_version
 
-hub release create $bumped_version -m "${commit_message}" 
+hub release create $bumped_version -m "${bumped_version}" 
 
 new_version=$(hub release -L 1 -f "%T")
 echo "newly released version:" $new_version
