@@ -1,3 +1,4 @@
+#!/bin/bash
 # Manually run command: sh entrypoint.sh
 
 latest_version=$(hub release -L 1 -f "%T")
